@@ -16,7 +16,13 @@ body{
     background-image: none;
     background-repeat: no-repeat;
     background-size: 100%;
-} 
+}
+
+.card__assinatura__container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
 .card__container{
     display: flex;
@@ -38,7 +44,7 @@ body{
 }
 
 .card__preco_combo{
-    width: 80%;
+    width: 50%;
 }
 
 .card__btn{
@@ -186,7 +192,42 @@ body{
 
 /*            Responsividade            */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
+
+    .container{
+        background-image: url("../images/Background.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 100%;
+    } 
+
+    .conteudo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        margin: auto;
+
+    }
+    
+    .card__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 2em 15em 5em 2em;
+        margin: 0;
+    }
+
+    .card__assinatura__container{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 0;
+        padding: 20px;
+    }
+
+}
+
+@media screen and (min-width: 1400px) {
     
     .container{
         background-image: url("../images/Background.png");
@@ -207,12 +248,15 @@ body{
     .card__container{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 5em 15em 15em 10em;
+        padding: 5em 25em 15em 10em;
         margin: 0;
     }
 
     .card__assinatura__container{
-        margin-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 5rem;
         padding: 20px;
     }
 
